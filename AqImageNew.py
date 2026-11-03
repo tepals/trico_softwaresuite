@@ -19,7 +19,7 @@ from matplotlib.figure import Figure
 from scipy.optimize import least_squares, curve_fit
 import SymGaussFitting as GF
 import pyqtgraph as pg
-from timeout import timeout
+# from timeout import timeout
 import errno
 from scipy.signal import find_peaks
 
@@ -153,7 +153,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         super(MainWindow, self).__init__(*args, **kwargs)
 
         self.ccd.binning.value = (1, 1)
-        self.ccd.resolution.value= (2048, 2048)
+        self.ccd.resolution.value= (204, 204)
         self.resolution = self.ccd.resolution.value
         em_choices = self.em_filter.axes["band"].choices.copy()
 
